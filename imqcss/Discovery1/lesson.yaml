@@ -1,0 +1,97 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Discovery1
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+- Class: text
+  Output: 'Ces exercices sont complémentaires au Chapitre 5:''Discovery''. Lorsque vous voyez ..., appuyez sur Entrer.'
+
+- Class: text
+  Output: 'Avant de commencer cet exercice, veillez à avoir installé les packages suivants: tm, SnowballC, NLP.'
+  
+
+- Class: text
+  Output: 'Le chapitre 5 introduit plusieurs concepts en rapport avec l''exploration statistique, dont l''apprentissage non supervisé (unsupervised learning).'
+
+# Question 1
+- Class: mult_question
+  Output: 'Laquelle de ces propositions est un exemple d''un problème d''apprentissage non supervisé ?'
+  AnswerChoices: 'Trouver des sujets dans un ensemble d''articles de journaux ; Découvrir les différences idéologiques entre législateurs; Identifier les mots communément utilisés dans le corpus d''un auteur; Toutes ces réponses'
+  CorrectAnswer: Toutes ces réponses
+  AnswerTests: omnitest(correctVal = "Toutes ces réponses")
+  Hint:  
+
+# Question 2
+- Class: mult_question
+  Output: 'Comment l''apprentissage non supervisé a permis aux chercheurs d''aborder la dispute concernant la paternité des ''Federalist Papers'' ?'
+  AnswerChoices: 'Hamilton et Madison avaient des sujets de recherche différents; Hamilton et Madison utilisaient des mots différents; Madison laissait des messages codés dans ses proses; Toutes ces réponses'
+  CorrectAnswer: Hamilton et Madison utilisaient des mots différents
+  AnswerTests: omnitest(correctVal = 'Hamilton et Madison utilisaient des mots différents')
+  Hint: Voir 'The Disputed Authorship of The Federalist Papers'.
+
+# Question 3
+- Class: mult_question
+  Output: 'Quel type d''informations contient une matrice ''document-term'' comme "dtm" ?'
+  AnswerChoices: 'La fréquence des termes contenus dans un ensemble de documents; Le nombre de fois qu''un mot est utilisé dans un ensemble de documents; Le nombre de documents qui contient au moins une fois un certain mot; Toutes ces réponses'
+  CorrectAnswer: Toutes ces réponses
+  AnswerTests: omnitest(correctVal = "Toutes ces réponses")
+  Hint: 
+
+# Question 4
+- Class: mult_question
+  Output: 'Pourquoi travailler avec une matrice ''document-term'' pousse à faire l''hypothèse ''bag-of-words'' ?'
+  AnswerChoices: 'Une matrice "document-term" n apprend rien sur la grammaire ou l ordre des mots; Une matrice "document-term" contient beaucoup de mots; Une matrice "document-term"" mets les mots similaires dans les mêmes sacs; Aucune de ces réponses'
+  CorrectAnswer: Une matrice "document-term" n apprend rien sur la grammaire ou l ordre des mots
+  AnswerTests: omnitest(correctVal = 'Une matrice "document-term" n apprend rien sur la grammaire ou l ordre des mots')
+  Hint: 
+
+## Programming Questions
+# Question 5
+- Class: cmd_question
+  Output: 'Le chapitre 5 introduit aussi plusieurs extensions R importantes, ou packages. Utilisez la fonctin "install.packages()" pour installer le package "wordcloud".'
+  CorrectAnswer: install.packages("wordcloud")
+  AnswerTests: omnitest(correctExpr = 'install.packages("wordcloud")')
+
+# Question 6
+- Class: cmd_question
+  Output: 'Maintenant appelez la fonction "library()" pour charger le package "wordcloud".'
+  CorrectAnswer: library(wordcloud)
+  AnswerTests: any_of_exprs('library(wordcloud)', 'library("wordcloud")')
+  Hint: 
+
+- Class: text 
+  Output: 'Nous allons utiliser le package ''wordcloud'' pour visualiser une matrice ''document-term'' appelée "dtm", qui a déjà été téléchargée pour vous.'
+
+# Question 7
+- Class: cmd_question
+  Output: 'Utilisez la fonction "inspect()" pour visualiser les 5 première lignes et 8 colonnes de "dtm".'
+  CorrectAnswer: inspect(dtm[1:5, 1:8])
+  AnswerTests: omnitest(correctExpr='inspect(dtm[1:5, 1:8])')
+  Hint: 
+
+# Question 8
+- Class: cmd_question
+  Output: 'Pour le moment, "dtm" appartient à une classe R particulière appelée "DocumentTermMatrix" (DTM). Cette classe d''objet n''est pas facile à manipuler dans R. En utilisant la fonction as.matrix(), forcez "dtm" à devenir un objet matriciel dans R appelé "dtm.mat".'
+  CorrectAnswer: dtm.mat <- as.matrix(dtm)
+  AnswerTests: omnitest(correctExpr = "dtm.mat <- as.matrix(dtm)")
+  Hint: 
+
+# Question 9
+- Class: cmd_question
+  Output: 'Finalement, utilisez la fonction wordcloud() pour visualiser les information contenues dans le huitième document de la matrice "dtm.mat".'
+  CorrectAnswer: wordcloud(colnames(dtm.mat), dtm.mat[8, ])
+  AnswerTests: omnitest(correctExpr = 'wordcloud(colnames(dtm.mat), dtm.mat[8, ])')
+  Hint: 
+
+# Question 10
+- Class: mult_question
+  Output: 'Laquelle de ces propositions décrit le mieux le sujet du huitième Federalist Paper?'
+  AnswerChoices: 'Les coûts et bénéfices de la milice; Le commerce entre les colonies; Les droits universels de l''homme; L''abolition de l''esclavagisme'
+  CorrectAnswer: Les coûts et bénéfices de la milice
+  AnswerTests: omnitest(correctVal = "Les coûts et bénéfices de la milice")
+
+- Class: text
+  Output: 'Vous avez terminé la partie 1 du cours "Discovery", félicitations !'

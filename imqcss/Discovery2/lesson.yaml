@@ -1,0 +1,125 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Discovery2
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+
+- Class: text
+  Output: 'Ces exercices sont complémentaires au Chapitre 5:''Discovery''. Lorsque vous voyez ..., appuyez sur Entrer.'
+
+- Class: text
+  Output: 'Le chapitre 5 introduit aussi des outils pour analyser les données de réseaux, qui décrivent les relations entre les unités.'
+
+# Question 1
+- Class: mult_question
+  Output: 'Quelle(s) proposition(s) est (sont) un (des) exemple(s) de réseaux ?'
+  AnswerChoices: 'Les mariages entre les familles; Les flux d''échanges internationaux; Les amitiés sur Facebook; Toutes ces propositions'
+  CorrectAnswer: Toutes ces propositions
+  AnswerTests: omnitest(correctVal = "Toutes ces propositions")
+  Hint: 
+
+# Question 2
+- Class: mult_question
+  Output: 'Un noeud représente __________'
+  AnswerChoices: 'Une unité individuelle; Un groupe d''unité; Toutes les unités'
+  CorrectAnswer: Une unité individuelle
+  AnswerTests: omnitest(correctVal = 'Une unité individuelle')
+  Hint: Voir 'Undirected Graphs and Centrality Measures'.
+
+# Question 3
+- Class: mult_question
+  Output: 'Une bordure (edge) représente __________'
+  AnswerChoices: 'une relation entre deux noeuds; une absence de relation entre deux noeuds; des noeuds identiques'
+  CorrectAnswer: une relation entre deux noeuds
+  AnswerTests: omnitest(correctVal = 'une relation entre deux noeuds')
+  Hint: 
+
+## Programming Questions
+- Class: text
+  Output: 'Les données de réseaux prennent souvent la forme de matrices de proximité (adjacency matrix). Les matrices de proximité ont le même nombre de lignes et de colonnes, et chaque ligne (colonne) correspond à une unité. Chaque cellule décrit la relation entre deux unités, et chaque diagonale décrit la relation d''une unité à elle-même.' 
+
+- Class: text
+  Output: 'Explorons la matrice de proximité "florence" décrite dans le chapitre 5. "florence" a déjà été téléchargée pour vous.'
+
+# Question 4
+- Class: cmd_question
+  Output: 'Vérifiez que "florence" est une matrice carrée (même nombre de lignes et de colonnes) en utilisant la fonction dim().'
+  CorrectAnswer: dim(florence)
+  AnswerTests: omnitest(correctExpr = "dim(florence)")
+
+# Question 5
+- Class: cmd_question
+  Output: 'Maintenant, utilisez l''indexation pour faire ressortir la (sous)matrice de proximité des 5 premières familles seulement.'
+  CorrectAnswer: florence[1:5, 1:5]
+  AnswerTests: omnitest(correctExpr = "florence[1:5, 1:5]")
+  Hint:  
+
+# Question 6
+- Class: mult_question
+  Output: 'Est-ce que "florence" est un exemple de données de réseaux dirigés ou non dirigés ?'
+  AnswerChoices: 'florence est non dirigée; florence est dirigée; impossible à dire'
+  CorrectAnswer: florence est non dirigée
+  AnswerTests: omnitest(correctVal = 'florence est non dirigée')
+  Hint:  
+
+- Class: text
+  Output: 'Essayons de visualiser "florence" en utilisant un graphique. Le package "igraph" a été téléchargé pour vous.'
+
+# Question 7
+- Class: cmd_question 
+  Output: 'Le traçage du graphique de réseau de "florence" se fait en deux étapes. D''abord, utilisez la fonction graph.adjacency() pour produire un objet "igraph" appelé "florence.graph". Faites attention de bien spécifier que la matrice de proximité est non dirigée et qu''il n''y a aucun mariage au sein d''une même famille.'
+  CorrectAnswer: florence.graph <- graph.adjacency(florence, mode = "undirected", diag = FALSE)
+  AnswerTests: omnitest(correctExpr = 'florence.graph <- graph.adjacency(florence, mode = "undirected", diag = FALSE)')
+  Hint: Rappelez-vous, la diagonale représente la relation d'une famille à elle-même.
+
+- Class: cmd_question
+  Output: 'Maintenant, utilisez le fonction "plot()" pour visualiser le réseau de mariages décrit par "florence.graph".'
+  CorrectAnswer: plot(florence.graph)
+  AnswerTests: omnitest(correctExpr = 'plot(florence.graph)')
+  Hint:  
+
+# Question 8
+- Class: mult_question
+  Output: 'Il est possible de quantifier la place de chaque famille dans le réseau en utilisant une mesure de centralité. Une mesure commune de la centralité est connue sous le nom de ''betweenness''. Laquelle de ces affirmation décrit le mieux cette mesure ?'
+  AnswerChoices: 'Le "betweenness"" est la proportion des chemins les plus courts entre deux autres noeuds qui contiennent la famille; Le "betweenness" est le nombre de noeuds qui sont immédiatement connectés à la famille; Le "betweenness" d''un noeud mesure la proximité avec un autre noeud; Aucune de ces réponses'
+  CorrectAnswer: Le "betweenness"" est la proportion des chemins les plus courts entre deux autres noeuds qui contiennent la famille
+  AnswerTests: omnitest(correctVal = 'Le "betweenness"" est la proportion des chemins les plus courts entre deux autres noeuds qui contiennent la famille')
+  Hint: 
+
+# Question 9
+- Class: cmd_question
+  Output: 'Calculez le "betweenness" de chaque noeud dans "florence" et gardez les données dans un objet appelé "between".'
+  CorrectAnswer: between <- betweenness(florence.graph)
+  AnswerTests: omnitest(correctExpr = 'between <- betweenness(florence.graph)')
+  Hint: 
+
+# Question 10 
+- Class: cmd_question
+  Output: 'Maintenant, utilisez la fonction "sort()" pour faire sortir un vecteur qui commence avec les familles avec les plus hauts betweeness et finit avec les familles aux plus petits betweeness.'
+  CorrectAnswer: sort(between, decreasing = TRUE)
+  AnswerTests: omnitest(correctExpr = 'sort(between, decreasing = TRUE)')
+  Hint:  
+
+- Class: text
+  Output: 'Les fonctions "sort()" et "order()" sont très proches. "sort()" retourne le vecteur demandé, "order()" retourne l''index du vecteur.'
+
+# Question 11
+- Class: cmd_question
+  Output: 'Vérifiez-le en utilisant la fonction "order()"  et en indexant le résultat du vecteur de la question précédente.'
+  CorrectAnswer: between[order(between, decreasing = TRUE)]
+  AnswerTests: omnitest(correctExpr = 'between[order(between, decreasing = TRUE)]')
+  Hint:  
+
+# Question 12
+- Class: mult_question
+  Output: 'D''après vous, quelle famille d''élite florentienne était la plus centrale dans le réseau de mariage ?'
+  AnswerChoices: 'Medici; Ridolfi; Bischeri; Strozzi; Pucci'
+  CorrectAnswer: Medici
+  AnswerTests: omnitest(correctVal = "Medici")
+  Hint: 
+
+- Class: text
+  Output: 'Vous avez terminé la partie 2 du cours "Discovery", félicitations !'

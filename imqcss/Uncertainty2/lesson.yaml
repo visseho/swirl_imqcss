@@ -1,0 +1,85 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Uncertainty2
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+# Question 1
+- Class: mult_question
+  Output: 'Vous voulez tester si l''éducation a un effet sur les salaires. Quelle pourrait être l''hypothèse nulle ?'
+  AnswerChoices: 'L`éducation n`a aucun effet sur les salaires; L`éducation a un effet sur les salaires; Le salaire n`a aucun effet sur l`éducation; Le salaire a un effet sur l`éducation'
+  CorrectAnswer: 'L`éducation n`a aucun effet sur les salaires'
+  AnswerTests: omnitest(correctVal='L`éducation n`a aucun effet sur les salaires')
+  Hint:
+
+# Question 2
+- Class: mult_question
+  Output: 'Lors de l''embauche, les grandes entreprises reçoivent une grande quantité de candidats surqualifiés, elles n''ont donc aucun problème à rejeter les candidats qualifiés, mais veulent quand même être certaines que les candidats sélectionnés sont vraiment qualifiés. Sachant que l''hypothèse nulle est que les candidats ne sont pas qualifiés, est-ce que les grandes entreprises se préoccupent plus de l''Erreur de type I ou l''Erreur de type 2 ?'
+  AnswerChoices: 'Type I; Type II'
+  CorrectAnswer: 'Type I'
+  AnswerTests: omnitest(correctVal='Type I')
+  Hint: 
+
+# Question 3
+- Class: mult_question
+  Output: 'Vous voulez mener une étude pour tester si les étudiants de votre université dorment plus d''heures que la moyenne nationale. Quel t-test devriez-vous utiliser ?'
+  AnswerChoices: 'deux échantillons, unilatéral;deux échantillons, bilatérale;un échantillon, unilatéral;un échantillon, bilatérale'
+  CorrectAnswer: 'un échantillon, unilatéral'
+  AnswerTests: omnitest(correctVal='un échantillon, unilatéral')
+  Hint: 
+
+# Question 4
+- Class: cmd_question
+  Output: 'Vous avez une pièce que vous suspectez d''être truqué et de tomber sur "face" avec une probabilité de 0.7. Vous décidez donc de tester cette hypothèse en la relançant exactement une fois: si "face" tombe, la pièce est truquée, sinon elle ne l''est pas. Quel est le pouvoir de votre test ? (à 0.1 près)?'
+  CorrectAnswer: '0.7'
+  AnswerTests: omnitest(correctExpr='0.7')
+  Hint: 
+
+# Question 5
+- Class: cmd_question
+  Output: 'Lancer une pièce une seule fois n''est pas très informatif, pensez-vous, et vous décidez donc de la lancer deux fois de plus. Si au moins une "face" apparaît, la pièce est truquée, sinon elle ne l''est pas. Quel est le pouvoir du test maintenant ? (à 0.001 près)?'
+  CorrectAnswer: '0.973'
+  AnswerTests: omnitest(correctExpr='0.973')
+  Hint: 
+
+# Question 6
+- Class: mult_question
+  Output: 'Que représente le calcul (1 - pouvoir) ?'
+  AnswerChoices: 'la probabilité d`un vrai positif; la probabilité d`un vrai négatif; la probabilité d`un faux positif; la probabilité d`un faux négatif'
+  CorrectAnswer: 'la probabilité d`un faux négatif'
+  AnswerTests: omnitest(correctVal='la probabilité d`un faux négatif')
+  Hint: See 7.2.6.
+
+# Question 7
+- Class: mult_question
+  Output: 'Vous répétez des tests statistiques jusqu''à ce qu''ils soient significatifs. Cette erreur est connue sous le nom de:'
+  AnswerChoices: 'multiple testing; repeated error detection; likelihood fallacy; multiple hypothesis detection'
+  CorrectAnswer: 'multiple testing'
+  AnswerTests: omnitest(correctVal='multiple testing')
+  Hint: 
+
+# Question 8
+- Class: mult_question
+  Output: 'Vous pensez qu''un dé est biaisé, donc vous le lancez deux fois. Si vous obtenez deux 6 d''affilé, vous le jugez biaisé. Quelle est la probabilité d''une Erreur de type I ?'
+  AnswerChoices: '1/2; 1/6; 1/12; 1/36'
+  CorrectAnswer: '1/36'
+  AnswerTests: omnitest(correctVal='1/36')
+  Hint: Erreur type I = Prob(rejeter H0 | H1 est vraie)
+
+# Question 9
+- Class: mult_question
+  Output: 'Vous voulez tester les affinités politiques du texan moyen sont significativement différentes de celles du New-Yorkais moyen. Quel test serait approprié ?'
+  AnswerChoices: 't test sur un échantillon; z-test sur deux échantillons; t-test sur deux échantillons; z-test sur un échantillon'
+  CorrectAnswer: 't-test sur deux échantillons'
+  AnswerTests: omnitest(correctVal='t-test sur deux échantillons')
+  Hint: See 7.2.5.
+
+# Question 10
+- Class: mult_question
+  Output: 'Qu''est-ce qui différencie un t-test d''un z-test ?'
+  AnswerChoices: 'La moyenne de la population est inconnue; L`écart-type de la population est inconnue; Le niveau de confiance est inconnue; Les données ne sont peut-être pas normallement distribuées'
+  CorrectAnswer: 'L''écart-type de la population est inconnue'
+  AnswerTests: omnitest(correctVal='L`écart-type de la population est inconnue')
+  Hint: 

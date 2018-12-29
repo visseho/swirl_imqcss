@@ -1,0 +1,88 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Uncertainty1
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+# Question 1
+- Class: mult_question
+  Output: 'Quelle proposition décrit le mieux en quoi la randomisation complète (complete randomization) diffère de la simple randomisation ?'
+  AnswerChoices: 'Seulement une partie de l échantillon est choisi aléatoirement; Une partie de l échantillon est randomisé mais pas le traitement; La taille de l échantillon qui reçoit le traitement est choisie a priori; L échantillon est randomisé a priori'
+  CorrectAnswer: 'La taille de l échantillon qui reçoit le traitement est choisie a priori'
+  AnswerTests: omnitest(correctVal='La taille de l échantillon qui reçoit le traitement est choisie a priori')
+  Hint: 
+
+# Question 2
+- Class: mult_question
+  Output: 'Dénotons la variance et le biais par V(x) et B(x) respectivement. Alors l''erreur quadratique moyenne (Mean Squared Error) est égale à:'
+  AnswerChoices: 'V(x^2) + B(x); V(x) + B(x^2); V(x)^2 + B(x); V(x) + B(x)^2'
+  CorrectAnswer: 'V(x) + B(x)^2'
+  AnswerTests: omnitest(correctVal='V(x) + B(x)^2')
+  Hint: See 7.1.2.
+
+# Question 3
+- Class: cmd_question
+  Output: 'La variance d''une population est de 5. Pour un échantillon de taille 10, quelle est la variance de la moyenne de l''échantillon (arrondi à 0.1)?'
+  CorrectAnswer: '0.5'
+  AnswerTests: omnitest(correctExpr='0.5')
+  Hint: Utilisez le théorême limite centrale.
+
+# Question 4
+- Class: mult_question
+  Output: 'Dans le contexte d''un intervalle de confiance, que représente alpha ?'
+  AnswerChoices: 'Lors d échantillonages répétés, c est la probabilité que l intervalle de confiance ne contienne pas la valeur observée du paramètre; C est la probabilité que l intervalle de confiance contienne la valeur observée du paramètre, basée sur la taille de l échantillon; C est la probabilité que l intervalle de confiance contienne la valeur observée du paramètre, sans prendre en compte la taille de l échantillon; C est le biais de la probabilité que l intervalle de confiance contienne la valeur observée du paramètre'
+  CorrectAnswer: 'Lors d échantillonages répétés, c est la probabilité que l intervalle de confiance ne contienne pas la valeur observée du paramètre'
+  AnswerTests: omnitest(correctVal='Lors d échantillonages répétés, c est la probabilité que l intervalle de confiance ne contienne pas la valeur observée du paramètre')
+  Hint:
+
+# Question 5
+- Class: cmd_question
+  Output: 'Dans notre échantillon d''électeurs, nous trouvons que 70% des participants soutiennent Obama. Si nous voulons que l''intervalle de confiance de 95% pour la population soit compris entre +/- 1% de la valeur réelle, de quel nombre minimal de participant avons-nous besoin ?'
+  CorrectAnswer: '8068'
+  AnswerTests: omnitest(correctExpr='8068')
+  Hint: Comment la marge d''erreur nous permet de déterminer la taille de l''échantillon selon un certain seuil de signification?'
+
+# Question 6
+- Class:  mult_question
+  Output: 'Les intervalles de confiance corrigé par le biais rétrospectif diffèrent des intervalles de confiance corigés du biais prospectif car:'
+  AnswerChoices: 'Les deux corrections ne sont, finalement, pas différentes; Dans la méthode prospective, la magnitude du biais est estimée sans observer les vraies valeurs des paramètres; En pratique, l intervalle de confiance corrigé du biais rétrospectif ont un taux de couverture plus faible; Dans la méthode prospective, il y a besoin de plus de points de données pour l estimation'
+  CorrectAnswer: 'Dans la méthode prospective, la magnitude du biais est estimée sans observer les vraies valeurs des paramètres'
+  AnswerTests: omnitest(correctVal='Dans la méthode prospective, la magnitude du biais est estimée sans observer les vraies valeurs des paramètres')
+  Hint: 
+
+# Question 7
+- Class: mult_question
+  Output: 'Combien de degrés de liberté a besoin un test-t pour un échantillon de taille n ?'
+  AnswerChoices: 'n; n-1; n-2; sqrt(n)'
+  AnswerTests: omnitest(correctVal='n-1')
+  Hint: 
+
+# Question 8
+- Class: cmd_question
+  Output: 'Je lance une pièce non truquée 27 fois. Quelle est la variance du nombre espéré de côtés faces (arrondir au 0.001 près)?'
+  CorrectAnswer: '0.009'
+  AnswerTests: omnitest(correctExpr='0.009')
+  Hint: Que vous apprend le théorème central limite?
+
+# Question 9
+- Class: cmd_question
+  Output: 'Maintenant, je lance une pièce de biais inconnu 10 fois. J''obtiens 8 "faces". Quelle est la marge d''erreur (non négative), calculée à partir d''un intervalle de confiance de 95% pour la vraie probabilité que la pièce tombe sur "face" (arrondis à 0.01 près)?'
+  CorrectAnswer: '0.25'
+  AnswerTests: omnitest(correctExpr='0.25')
+  Hint:
+
+# Question 10
+- Class: mult_question
+  Output: 'Dans un échantillon, une pièce est tombée 50% du temps sur "pile". Pour un intervalle de confiance de 95% et une marge d''erreur de 0.001, à peu près combien de lancés devriez-vous avoir besoin pour vérifier que la pièce n''est pas truquée ?'
+  AnswerChoices: '100000; 500000; 1000000; 5000000'
+  AnswerTests: omnitest(correctVal='1000000')
+  Hint: 
+
+# Question 11
+- Class: mult_question
+  Output: 'La variance d''une variable aléatoire qui suit une loi de Bernouilli est donnée par p(1-p). Quelle est la valeur de p qui maximise la variance d''une telle variable ?'
+  AnswerChoices: '0; 1/2; 1/3; 1/4'
+  AnswerTests: omnitest(correctVal='1/2')
+  Hint: 

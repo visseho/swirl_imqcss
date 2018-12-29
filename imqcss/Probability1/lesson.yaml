@@ -1,0 +1,81 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Probability1
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+# Question 1
+- Class: mult_question
+  Output: 'Je jette un dé à 6 côtés 3 000 000 fois. Le nombre 1 apparaît environ 500 000 fois, j''en conclue donc que la probabilité du chiffre 1 est 1/6. Ceci est une approche ____.'
+  AnswerChoices: '"Fréquentiste"; "Bayesienne"'
+  CorrectAnswer: 'Fréquentiste'
+  AnswerTests: omnitest(correctVal='"Fréquentiste"')
+  Hint: 
+
+# Question 2
+- Class: cmd_question
+  Output: 'Supposez que P(A)=0.4 et P(B)=0.3. Quelle est la valeur minimum de P(A et pas B)?'
+  CorrectAnswer: '0.1'
+  AnswerTests: omnitest(correctExpr='0.1')
+  Hint: Que se passe-t-il si B est complètement compris dans A ?
+
+# Question 3
+- Class: mult_question
+  Output: 'De tous les anagrammes possible du mot CHAIR (en incluant le mot original), quelle est la probabilité que la lettre I apparaisse en premier ?'
+  AnswerChoices: '0.1; 0.2; 0.3; 0.4'
+  CorrectAnswer: '0.2'
+  AnswerTests: omnitest(correctVal='0.2')
+  Hint: 
+
+# Question 4
+- Class: mult_question
+  Output: 'Laquelle de ces réponses n''est pas le numérateur d''une utilisation correcte du théorême de Bayes et/ou de la définition de la probabilité conditionnelle, pour P(A | B, C)?'
+  AnswerChoices: 'P(B | A, C) P(A | C); P(B, C | A) P(A); P(A, B, C); P(A, B | C) P(C)'
+  CorrectAnswer: 'P(A, B | C) P(C)'
+  AnswerTests: omnitest(correctVal='P(A, B | C) P(C)')
+  Hint: 
+
+# Question 5
+- Class: cmd_question
+  Output: 'Une maladie atteint 1% de la population. Le seul test disponible pour cette maladie a un taux de positif de 99% lorsque la maladie est effectivement présente, mais il est aussi positif 20% du temps lorsque la maladie n''est pas présente. You take this test and it returns positive. Vous faites le test et il retourne un résultat positif. Quelle est la probabilité que vous ayez vraiment la maladie (arrondis à 0.01 près)?'
+  CorrectAnswer: '0.05'
+  AnswerTests: omnitest(correctExpr='0.05')
+  Hint: 
+
+# Question 7
+- Class: cmd_question
+  Output: 'Soient A et B deux variables indépendantes qui prennent seulement les valeurs 0 et 1. Si P(A=1, B=1)=0.12, P(A=0, B=1)=0.28, et P(A=1)=0.3, quelle est la valeur de  P(A=0, B=0)?'
+  CorrectAnswer: '0.42'
+  AnswerTests: omnitest(correctExpr='0.42')
+  Hint: 
+
+# Question 8
+- Class: mult_question
+  Output: 'Imaginez trois prisonniers: A, B, & C. Un prisonnier, sélectionné uniformément et aléatoirement, sera pardonné alors que les deux autres seront exécuté. Le prisonnier A  demande au geôlier (qui sait) de lui dire un des prisonniers qui sera exécuté: "Si je suis pardonné, lance une pièce et dis-moi B ou C; si C est pardonné, dis-moi B; et si B est pardonné, dis-moi C." Le geôlier dit que B sera exécuté. En utilisant le théorême de Bayes, quel est le numérateur de l''expression qui calcule la probabilité que C soit pardonné ?'
+  AnswerChoices: 'P(geôlier dit que B est executé | C est pardonné) * P(C est pardonné); P(B est exécuté | C est pardonné) * P(B est exécuté); P(C est pardonné | geôlier dit que B est exécuté) * P(B est exécuté)'
+  CorrectAnswer: 'P(geôlier dit que B est executé | C est pardonné) * P(C est pardonné)'
+  AnswerTests: omnitest(correctVal='P(geôlier dit que B est executé | C est pardonné) * P(C est pardonné)')
+  Hint: 
+
+# Question 9
+- Class: cmd_question
+  Output: 'En vous basant sur la question précédente, quelle est la probabilité que C soit pardonné (arrondi au 0.01 près)?'
+  CorrectAnswer: '0.67'
+  AnswerTests: omnitest(correctExpr='0.67')
+  Hint:
+
+# Question 10
+- Class: cmd_question
+  Output: 'Vous avez un seau avec deux pièces: l''une est une pièce régulière, tandis que l''autre possède deux côtés "face" (pas de pile). Vous prenez une pièce aléatoirement et la lancez, vous obtenez "face". Quelle est la probabilité que vous ayez choisi la pièce non truquée (arrondi au 0.01 près) ?'
+  CorrectAnswer: '0.33'
+  AnswerTests: omnitest(correctExpr='0.33')
+  Hint:
+
+# Question 11
+- Class: cmd_question
+  Output: 'Vous avez toujours un seau avec deux pièces,l''une est une pièce régulière, tandis que l''autre possède deux côtés "face" (pas de pile). Vous prenez une pièce aléatoirement. Si à n''importe quel moment vous obtenez pile, vous avez de toute évidence pris la pièce non truquée. Si vous n''arrêtez pas d''obtenir des faces, vous arrêtez et décidez que la pièce est truqyée, mais seulement si la probabilité que vous ayez choisi la pièce non truquée est inférieure à 1/1000è, sinon vous continuez vos lancés. Quel est le nombre minimal de lancés qui donnent "face" à la suite avant que vous décidiez d''arrêter et de déterminer que la pièce est truquée ?'
+  CorrectAnswer: '10'
+  AnswerTests: omnitest(correctExpr='10')
+  Hint: 

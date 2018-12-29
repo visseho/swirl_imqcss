@@ -1,0 +1,97 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Prediction1
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+- Class: text
+  Output: 'Ces exercices sont complémentaires au Chapitre 4:''Prediction''. Lorsque vous voyez ..., appuyez sur Entrer.'
+
+# Question 1
+- Class: mult_question
+  Output: 'Vrai ou Faux: Les boucles peuvent simplifier le code de programmation lorsque l''on veut exécuter un morceau de code à répétition.'
+  AnswerChoices: 'Vrai; Faux'
+  CorrectAnswer: Vrai
+  AnswerTests: omnitest(correctVal='Vrai')
+  Hint: 
+
+# Question 2
+- Class: mult_question
+  Output: 'Une itération veut dire...'
+  AnswerChoices: 'Répéter une action; Faire une action une seule fois; Passer une action'
+  CorrectAnswer: Répéter une action
+  AnswerTests: omnitest(correctVal='Répéter une action')
+  Hint:
+
+# Question 3
+- Class: cmd_question
+  Output: 'Sachant que "n <- 10", combien de fois la boucle "for (i in 1:n)" tournera ?'
+  CorrectAnswer: 10
+  AnswerTests: omnitest(correctExpr='10')
+  Hint:
+
+# Question 4
+- Class: mult_question
+  Output: 'Dans l''expression conditionnelle "if (Y) {expression1}", "expression1" sera exécuté si "Y" est _____.'
+  AnswerChoices: 'Vrai; Faux'
+  CorrectAnswer: Vrai
+  AnswerTests: omnitest(correctVal='Vrai')
+  Hint:  
+
+# Question 5
+- Class: mult_question
+  Output: 'Une expression conditionnelle qui est emboîtée (nested) dans une boucle est exécutée à l'' _____ de la boucle.'
+  AnswerChoices: 'intérieur; extérieur'
+  CorrectAnswer: intérieur
+  AnswerTests: omnitest(correctVal='intérieur')
+  Hint: 
+
+## Programming Questions
+- Class: text
+  Output: 'Il est souvent utile de créer un vecteur vide pour y stocker les résultats d''une boucle'
+
+# Question 6
+- Class: cmd_question
+  Output: 'Créez un vecteur que vous appelerez "output", remplis de valeus "NA" de longueur "n". L''objet "n" a été inclus dans cette leçon.'
+  CorrectAnswer: output <- rep(NA, n)
+  AnswerTests: omnitest(correctExpr='output <- rep(NA,n)')
+  Hint: 
+
+# Question 7
+- Class: cmd_question
+  Output: 'Utilisez la fonction "cat()" pour assembler une phrase et l''objet "n". Le résultat finalement doit être: "n possède la valeur 10".'
+  CorrectAnswer: cat("n possède la valeur", n)
+  AnswerTests: omnitest(correctExpr='cat("n possède la valeur", n)')
+  Hint: Vous ne devriez pas avoir besoin de taper de nombre.
+
+# Question 8
+- Class: cmd_question
+  Output: 'Un vecteur appelé "fruit" a été téléchargé pour vous. Appelez le vecteur pour voir de quoi il a l''air.'
+  CorrectAnswer: fruit
+  AnswerTests: omnitest(correctExpr='fruit')
+
+# Question 9
+- Class: cmd_question
+  Output: 'Utilisez une fonction pour déterminer différents types de fruits, nous voulons voir chaque fruit apparaître une seule fois.' 
+  CorrectAnswer: unique(fruit)
+  AnswerTests: omnitest(correctExpr='unique(fruit)')
+  Hint: 
+
+# Question 10
+- Class: cmd_question
+  Output: 'Voici une variante de la question de code classique ''FizzBuzz''. Ecrivez une boucle qui exécute le code ''cat(''Le nombre suivant est divisible par 3'', i, ''\n'')'' pour les nombres de 1 à 50 (inclus) mais seulement pour les multiples de 3. Utilisez des crochets pour le conditionnel.'
+  CorrectAnswer: for(i in 1:50){if (i %% 3 == 0) { cat("The following number i is divisible by 3", i, "\n")}}
+  AnswerTests: omnitest(correctExpr='for(i in 1:50){if (i %% 3 == 0) { cat("The following number i is divisible by 3", i, "\n")}}')
+  Hint: L'opérateur modulaire est "%%".
+
+# Question 11
+- Class: cmd_question
+  Output: 'A partir du code que vous venez d''écrire, exécutez le code ''cat(''Le nombre suivant est divisible par 5'', i, ''\n'')'' si le nombre est divisible par 5 (et non plus seulement 3).'
+  CorrectAnswer: for(i in 1:50){if (i %% 3 == 0) { cat("The following number i is divisible by 3", i, "\n") } else if (i %% 5 == 0) { cat("The following number i is divisible by 5", i, "\n")}}
+  AnswerTests: omnitest(correctExpr='for(i in 1:50){if (i %% 3 == 0) { cat("The following number i is divisible by 3", i, "\n") } else if (i %% 5 == 0) { cat("The following number i is divisible by 5", i, "\n")}}')
+  Hint: Il faut seulemment ajouter une condition supplémentaire "if" .
+
+- Class: text
+  Output: 'Vous avez terminé la partie 1 du cours "Prédiction", félicitations !'

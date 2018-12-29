@@ -1,0 +1,75 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Probability2
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+# Question 1
+- Class: cmd_question
+  Output: 'Quelle est la probabilité qu''une variable aléatoire distribuée uniformément dans l''intervalle [1, 4] prenne une valeur inférieure ou égale à 2.5?'
+  CorrectAnswer: '0.5'
+  AnswerTests: omnitest(correctExpr='0.5')
+  Hint:
+
+# Question 2
+- Class: mult_question
+  Output: 'Supposez une variable aléatoire X, de sorte que sa moyenne soit 0 et que la valeur espérée de X^2 soit 5. Quelle est la variance de X?'
+  AnswerChoices: '2; 3; 4; 5'
+  CorrectAnswer: '5'
+  AnswerTests: omnitest(correctVal='5')
+  Hint: 
+
+# Question 3
+- Class: mult_question
+  Output: 'Supposez qu''ily a 10 électeurs pour 2 candidats, A et B. Chaque électeur choisit indépendamment de voter pour A avec une probabilité de 0.1, et B avec une probabilité de 0.9. Quelle est, approximativement, la probabilité que A ait au moins un vote ?'
+  AnswerChoices: '0.65; 0.5; 0.75; 0.25'
+  CorrectAnswer: '0.65'
+  AnswerTests: omnitest(correctVal='0.65')
+  Hint: Utilisez la propriété P(A)=1-P(pas A).
+
+# Question 4
+- Class: mult_question
+  Output: 'Roughly what percentage of data with a standard normal distribution falls within +/- one standard deviation from the mean?'
+  AnswerChoices: '33; 50; 66; 87'
+  CorrectAnswer: '66'
+  AnswerTests: omnitest(correctVal='66')
+  Hint:
+
+# Question 5
+- Class: cmd_question
+  Output: 'Supposez que l''écart-type d''une population soit de 10. Quel est l''écart-type de la moyenne de l''échantillon pris de cette population composé de 25 unités ?'
+  CorrectAnswer: '2'
+  AnswerTests: omnitest(correctExpr='2')
+  Hint:
+
+# Question 6
+- Class: mult_question
+  Output: 'Vous possédez une pièce truquée qui sort face avec une probabilité de p=0.7. Quelle est la probabilité que vous obteniez votre troisième face au cinquième lancé ?'
+  AnswerChoices: '0.19; 0.20; 0.21; 0.22'
+  CorrectAnswer: '0.19'
+  AnswerTests: omnitest(correctVal='0.19')
+  Hint: 
+
+# Question 7
+- Class: cmd_question
+  Output: 'Maintenant supposez que vous lanciez une pièce non truquée 10 fois. Quelle est la probabilité d''obtenir la seconde face au quatrième lancé et le cinquième face au dixième lancé ? (arrondis au 0.01 près)'
+  CorrectAnswer: '0.03'
+  AnswerTests: omnitest(correctExpr='0.03')
+  Hint: Qu''est-ce que cela suggère pour les lancés 1-3 et les lancés 5-9 ? Pouvez-vous utiliser le fait que ces groupes de lancés sont indépendants ?
+
+# Question 8
+- Class: mult_question
+  Output: 'Si la variance de X est b, quelle est la variance de 2*X ?'
+  AnswerChoices: '0.5b; b; 2b; 4b'
+  CorrectAnswer: '4b'
+  AnswerTests: omnitest(correctVal='4b')
+  Hint:
+
+# Question 9
+- Class: cmd_question
+  Output: 'Quelle la est pente (constante) de la fonction de distribution cumulative d''une variable aléatoire distribuée uniformément de a=0 à b=20 ? (arrondis au 0.01 près)?'
+  CorrectAnswer: '0.05'
+  AnswerTests: omnitest(correctExpr='0.05')
+  Hint: 

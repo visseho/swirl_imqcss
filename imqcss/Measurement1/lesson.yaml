@@ -1,0 +1,95 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Measurement1
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+- Class: text
+  Output: 'Ces exercices sont complémentaires au Chapitre 3:''Measurement''. Lorsque vous voyez ..., appuyez sur Entrer.'
+
+## Conceptual Questions
+# Question 1
+- Class: mult_question
+  Output: 'Quelles peuvent être les raisons pour lesquelles certaines réponses sont manquantes dans les enquêtes ?'
+  AnswerChoices: 'Les participants refusent de répondre; Les participants ne connaissent pas la réponse; Les deux'
+  CorrectAnswer: Les deux
+  AnswerTests: omnitest(correctVal='Les deux')
+  Hint:
+
+# Question 2
+- Class: mult_question
+  Output: 'La méthode du "listwise deletion" sert à gérer des données manquantes. Elle consiste à supprimer une observation en entier si ________.'
+  AnswerChoices: 'au moins une de ses variables affiche une valeur manquante; toutes ses variables sont manquantes; aucune des variables n''est manquante'
+  CorrectAnswer: au moins une de ses variables affiche une valeur manquante
+  AnswerTests: omnitest(correctVal='au moins une de ses variables affiche une valeur manquante')
+  Hint:
+
+# Question 3
+- Class: mult_question
+  Output: 'Les histogrammes créent __________ le long des variables d''intérêt.'
+  AnswerChoices: 'des intervalles; des boîtes; les deux sont corrects'
+  CorrectAnswer: les deux sont corrects
+  AnswerTests: omnitest(correctVal='les deux sont corrects')
+  Hint: See 'Visualizing the Univariate Distribution'
+
+# Question 4
+- Class: mult_question
+  Output: 'Pour exporter et sauvegarder des graphiques, utilisez __________ pour ouvrir un lecteur pdf et __________ pour le fermer.'
+  AnswerChoices: 'pdf() et dev.off(); pdf.open() et dev.close(); pdf.on() et dev()'
+  CorrectAnswer: pdf() et dev.off()
+  AnswerTests: omnitest(correctVal='pdf() et dev.off()')
+  Hint: En anglais, le terme "device" englobe tout ce qui a été créé dans un but particulier. En français et en ce qui nous concerne, ceci pourrait être un logiciel, un périphérique, etc.
+
+
+# Question 5
+- Class: mult_question
+  Output: ' Une enquête "sans remise" ("Without replacement") signifie que chaque individu est interrogé __________.'
+  AnswerChoices: 'une seule fois; plusieurs fois; l''un ou l''autre'
+  CorrectAnswer: une seule fois
+  AnswerTests: omnitest(correctVal='une seule fois')
+  Hint: 
+
+## Programming questions
+- Class: text
+  Output: 'Nous allons utiliser la base de données "afghan.csv" décrite dans le chapitre. Elle a été téléchargée pour vous et se trouve dans votre environnement.'
+
+# Question 6
+- Class: cmd_question
+  Output: 'Comment trouver les statistiques descriptives de cette base de données ?'
+  CorrectAnswer: summary(afghan)
+  AnswerTests: omnitest(correctExpr='summary(afghan)')
+  Hint:
+
+# Question 7
+- Class: mult_question
+  Output: 'Jetez un oeil aux statistiques descriptives. Laquelle de ces variables possède des valeurs manquantes ?'
+  AnswerChoices: '"violent.exp.ISAF"; "employed"; "age"'
+  CorrectAnswer: violent.exp.ISAF
+  AnswerTests: omnitest(correctVal='"violent.exp.ISAF"')
+  Hint:
+
+# Question 8
+- Class: cmd_question
+  Output: 'Toujours d''après les statistiques descriptives, les participants ont étudié combien de temps en moyenne ? Arrondissez au nombre près.'
+  CorrectAnswer: '4'
+  AnswerTests: any_of_exprs('4', '4.0', '4.00', '4.002','4.002179')
+  Hint: 
+
+# Question 9
+- Class:  cmd_question
+  Output: 'Créez un tableau de proportions de la situation d''emplois (variable "employed") dans chaque province.'
+  CorrectAnswer: prop.table(table(afghan$province, afghan$employed))
+  AnswerTests: any_of_exprs('prop.table(table(afghan$province, afghan$employed))', 'prop.table(table(afghan$employed, afghan$province))', 'prop.table(table(province = afghan$province, employed = afghan$employed))', 'prop.table(table(employed = afghan$employed, province = afghan$province))', 'prop.table(table(Province = afghan$province, Employed = afghan$employed))', 'prop.table(table(Employed = afghan$employed, Province = afghan$province))')
+  Hint: ?prop.table() pour avoir de l''aide sur la fonction.
+
+# Question 10
+- Class: cmd_question
+  Output: 'Comment compter le nombre d''éléments manquants dans "violent.exp.taliban"?'
+  CorrectAnswer: sum(is.na(afghan$violent.exp.taliban))
+  AnswerTests: any_of_exprs('sum(is.na(afghan$violent.exp.taliban))', 'sum(is.na(x = afghan$violent.exp.taliban))', 'sum(is.na(x=afghan$violent.exp.taliban))')
+  Hint: 
+
+- Class: text
+  Output: 'Vous avez terminé la partie 1 du cours "Measurement", félicitations !'

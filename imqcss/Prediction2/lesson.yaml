@@ -1,0 +1,88 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Prediction2
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+- Class: text
+  Output: 'Ces exercices sont complémentaires au Chapitre 4:''Prediction''. Lorsque vous voyez ..., appuyez sur Entrer.'
+  
+# Question 1  
+- Class: mult_question
+  Output: 'Vrai ou Faux: Une corrélation positive veut dire qu''une variable a plus de change d''être supérieure à sa moyenne si l''autre variable est aussi supérieure à sa moyenne.'
+  AnswerChoices: 'Vrai; Faux'
+  CorrectAnswer: 'Vrai'
+  AnswerTests: omnitest(correctVal='Vrai')
+  Hint: 
+
+# Question 2
+- Class: cmd_question
+  Output: 'L''ordonnée a dans le modèle y = a + bx + e représente la valeur moyenne de y lorsque x est égal à _____.'
+  CorrectAnswer: '0'
+  AnswerTests: omnitest(correctExpr='0')
+  Hint: Voir les moindres carrés (Least Squares)
+
+# Question 3
+- Class: mult_question
+  Output: 'Nous utilisons la droite de régression pour prédire la valeur de la variable de résultat y chapeau ("y hat"), aussi connu sous le nom de _____'
+  AnswerChoices: 'valeur prédite; valeur ajustée; les deux'
+  CorrectAnswer: les deux
+  AnswerTests: omnitest(correctVal='les deux')
+  Hint: 
+
+# Question 4
+- Class: mult_question
+  Output: 'Un R carré (R2) proche de 1 suggère que le modèle est ___________'
+  AnswerChoices: 'bien ajusté; peu ajusté'
+  CorrectAnswer: bien ajusté
+  AnswerTests: omnitest(correctVal='bien ajusté')
+  Hint: Voir 'Model Fit'
+
+# Question 5
+- Class: mult_question
+  Output: 'La différence entre le résultat observé et la valeur prédite s''appelle _______.'
+  AnswerChoices: 'le résidu; l''erreur de prédiction; les deux'
+  CorrectAnswer: les deux
+  AnswerTests: omnitest(correctVal='les deux')
+  Hint: 
+
+## Programming Questions
+# Question 6
+- Class: cmd_question
+  Output: 'Dans le modèle y = 5 + 2x, quelle est l''ordonné?'
+  CorrectAnswer: '5'
+  AnswerTests: omnitest(correctVal='5')
+  Hint:
+
+# Question 7
+- Class: cmd_question
+  Output: 'Nous avons inclus 2 vecteurs x et y. Régressez y sur x et assignez la régression à l''objet "fit".'
+  CorrectAnswer: fit <- lm(y ~ x)
+  AnswerTests: omnitest(correctExpr='fit <- lm(y ~ x)')
+  Hint: Pour une régression linéaire, la fonction est lm()
+
+# Question 8
+- Class: cmd_question
+  Output: 'De quoi a l''air l''objet "fit" ?'
+  CorrectAnswer: fit
+  AnswerTests: omnitest(correctExpr='fit')
+  Hint: 
+
+# Question 9
+- Class: cmd_question
+  Output: 'Comment voir les coefficients estimés dans l''objet "fit" ?'
+  CorrectAnswer: coef(fit)
+  AnswerTests: any_of_exprs('coef(fit)', 'fit$coef', 'fit$coefficients')
+  Hint: La fonction est simplement coef().
+
+# Question 10
+- Class: cmd_question
+  Output: 'Quelles sont les valeurs prédites ?'
+  CorrectAnswer: fitted(fit)
+  AnswerTests: any_of_exprs('fitted(fit)', 'predict(fit)')
+  Hint: Utilisez la fonction fitted().
+
+- Class: text
+  Output: 'Vous avez terminé la partie 2 du cours "Prédiction", félicitations !'

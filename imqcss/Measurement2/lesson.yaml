@@ -1,0 +1,90 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Measurement2
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+- Class: text
+  Output: 'Ces exercices sont complémentaires au Chapitre 3:''Measurement''. Lorsque vous voyez ..., appuyez sur Entrer.'
+
+## Conceptual questions
+# Question 1
+- Class: mult_question
+  Output: 'Dans la section 3.6, quel type de graphique utilise-t-on pour visualiser les différences idéologiques entre les Démocrates et les Républicains ?'
+  AnswerChoices: 'Un diagramme de dispersion (scatterplot); Un diagramme en bâtons (bar plot); Un histogramme (histogram)'
+  CorrectAnswer: Un diagramme de dispersion (scatterplot)
+  AnswerTests: omnitest(correctVal='Un diagramme de dispersion (scatterplot)')
+  Hint:
+
+# Question 2
+- Class: mult_question
+  Output: 'Vrai ou faux: La polarisation politique s''impose lorsque les centres idéologiques de deux partis politiques divergent de plus en plus dans le temps.'
+  AnswerChoices: 'Vrai; Faux'
+  CorrectAnswer: 'Vrai'
+  AnswerTests: omnitest(correctVal='Vrai')
+  Hint: 
+
+# Question 3
+- Class: mult_question
+  Output: 'Quel est l''angle de la courbe de Lorenz si tout le monde gagne le même revenu ?'
+  AnswerChoices: '30 degrés; 45 degrés; 90 degrés'
+  CorrectAnswer: 45 degrés
+  AnswerTests: omnitest(correctVal='45 degrés')
+  Hint: 
+
+# Question 4
+- Class: mult_question
+  Output: 'Pour estimer la corrélation entre deux variables x et y, nous avons besoin de connaître leurs moyennes ainsi que leurs _______________________.'
+  AnswerChoices: 'maximums; écart-types; longueurs'
+  CorrectAnswer: écart-types
+  AnswerTests: omnitest(correctVal='écart-types')
+  Hint: 
+
+# Question 5
+- Class: mult_question
+  Output: 'Dans la fonction kmeans(), quelle option est utilisée pour définir le nombre de grappes (clusters) ?'
+  AnswerChoices: 'centers; groups; iterations'
+  CorrectAnswer: centers
+  AnswerTests: omnitest(correctVal='centers')
+  Hint: 
+
+## Programming Questions  
+# Question 6
+- Class: cmd_question
+  Output: 'Utilisez "matrix()" pour créer une matrice de 2 lignes par 5 colonnes dont les lignes sont les nombres de 1 à 10. Assignez cette matrice à un objet "x".'
+  CorrectAnswer: x <- matrix(1:10, nrow = 2, ncol = 5, byrow = TRUE)
+  AnswerTests: omnitest(correctExpr='x <- matrix(1:10, nrow = 2, ncol = 5, byrow = TRUE)')
+  Hint: 
+
+# Question 7
+- Class: cmd_question
+  Output: 'Comment trouver les moyennes des lignes de cette matrice ?'
+  CorrectAnswer: rowMeans(x)
+  AnswerTests: any_of_exprs('rowMeans(x)', 'rowSums(x) / ncol(x)', 'apply(x, 1, mean)', 'c(mean(x[1, ]), mean(x[2, ]))')
+  Hint: 
+
+# Question 8
+- Class: cmd_question
+  Output: 'Une liste, "z", a été chargée avec cette leçon. Appelez l''objet pour voir de quoi il a l''air.'
+  CorrectAnswer: z
+  AnswerTests: omnitest(correctExpr='z')
+  Hint: 
+
+# Question 9
+- Class: cmd_question
+  Output: 'Appelez le premier élément de la liste en utilisant des crochets et le numéro 1.'
+  CorrectAnswer: z[[1]]
+  AnswerTests: omnitest(correctExpr='z[[1]]')
+  Hint: 
+  
+# Question 10
+- Class: cmd_question
+  Output: 'Appelez le troisième élément de la liste en utilisant des crochets et le nom du troisième élément.'
+  CorrectAnswer: z[["z3"]]
+  AnswerTests: omnitest(correctExpr='z[["z3"]]')
+  Hint: 
+  
+- Class: text
+  Output: 'Vous avez terminé la partie 2 du cours "Measurement", félicitations !'

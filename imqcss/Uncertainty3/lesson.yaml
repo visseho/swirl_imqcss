@@ -1,0 +1,86 @@
+- Class: meta
+  Course: imqcss
+  Lesson: Uncertainty3
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.3
+
+# Question 1
+- Class: mult_question
+  Output: 'Que dit le postulat d''exogénéité derrière la régression linéaire?'
+  AnswerChoices: 'La moyenne des erreurs ne dépend pas des variables explicatives et est nulle; La variance des erreurs ne dépend pas des variables explicatives et est nulle; La médiane des erreurs ne dépend pas des variables explicatives et est nulle'
+  CorrectAnswer: 'La moyenne des erreurs ne dépend pas des variables explicatives et est nulle'
+  AnswerTests: omnitest(correctVal='La moyenne des erreurs ne dépend pas des variables explicatives et est nulle')
+  Hint:
+
+# Question 2
+- Class: mult_question
+  Output: 'Vous observez que les étudiants qui viennent en classe ont tendance à avoir de meilleurs résultats aux examens, vous en concluez que la présence en classe a un effet positif sur la performance aux examens. Cependant, vous n''intégrez pas l''effet de la motivation personnelle. Quel terme décrit le mieux ce problème ?'
+  AnswerChoices: 'Un biais de variable omise; Un biais de variable indépendante omise; L`exogénéité; Une Erreur de type I'
+  CorrectAnswer: 'Un biais de variable omise'
+  AnswerTests: omnitest(correctVal='Un biais de variable omise')
+  Hint:
+
+# Question 3
+- Class: mult_question
+  Output: 'Qu''est-ce que l''homoscédasticité ?'
+  AnswerChoices: 'Les erreurs et la variance sont indépendantes et ne dépendent pas des variables explicatives; Les erreurs et l`espérance sont indépendantes et ne dépendent pas des variables explicatives; L`espérance des erreurs est égale à leur variance; La variance des erreurs dépend de leur expérance'
+  CorrectAnswer: 'Les erreurs et la variance sont indépendantes et ne dépendent pas des variables explicatives'
+  AnswerTests: omnitest(correctVal='Les erreurs et la variance sont indépendantes et ne dépendent pas des variables explicatives')
+  Hint: 
+
+# Question 4
+- Class: mult_question
+  Output: 'Dans R, quel terme devez-vous inclure dans une formule de régression linéaire pour ignorer l''ordonnée ?'
+  AnswerChoices: '1; -1; 0; -2'
+  CorrectAnswer: '-1'
+  AnswerTests: omnitest(correctVal='-1')
+  Hint: 
+
+# Question 5
+- Class: mult_question
+  Output: 'Si la correlation entre X et Y est 4, l''erreur-type de X est 1 et celle de Y est 2, quelle est la covariance entre X et Y ?'
+  AnswerChoices: '8; 4; 2; 1'
+  CorrectAnswer: '8'
+  AnswerTests: omnitest(correctVal='8')
+  Hint:
+
+# Question 6
+- Class: cmd_question
+  Output: 'Pour 765 observations et 8 variables explicatives dans un modèle de régression linéaire avec une ordonnée, lorsque l''on calcule la p-value des coefficients, combien de degrés de liberté a la statistique t ?'
+  CorrectAnswer: '756'
+  AnswerTests: omnitest(correctExpr='756')
+  Hint: 
+
+# Question 7
+- Class: mult_question
+  Output: 'La variance d''une variable peut s''écrire V(x) = E[x^2] - E[x]^2. En utilisant cette formule et les propriétés des résidus: laquelle de ces proposition est une expression valide de la variance des résidus d''une régression linéaire (où e dénote le vecteur des résidus)?'
+  AnswerChoices: 'E[e^2] - E[e]^2; E[e^2]; Les deux réponses sont correctes'
+  CorrectAnswer: 'Les deux réponses sont correctes'
+  AnswerTests: omnitest(correctVal='Les deux réponses sont correctes')
+  Hint: 
+
+# Question 8
+- Class: mult_question
+  Output: 'Quand devriez-vous utiliser le R2 ajusté au lieu du R2, toute chose étant égales par ailleurs ?'
+  AnswerChoices: 'Lorsqu`il y a beaucoup d`observations; Lorsqu`il y a beaucoup d`indicateurs; Lorsqu`il y a beaucoup de degrés de liberté; Lorsque les données sont non linéaires'
+  CorrectAnswer: 'Lorsqu`il y a beaucoup d`indicateurs'
+  AnswerTests: omnitest(correctVal='Lorsqu`il y a beaucoup d`indicateurs')
+  Hint: 
+
+# Question 9
+- Class: mult_question
+  Output: 'Vrai ou Faux: Dans un modèle de régression linéaire, si deux intervalles de confiance de  deux variables se chevauchent, ceci implique this implies that the confidence interval for the difference between those variables must contain 0.'
+  AnswerChoices: 'Vrai; Faux'
+  CorrectAnswer: 'Faux'
+  AnswerTests: omnitest(correctVal='Faux')
+  Hint: 
+
+# Question 10
+- Class: mult_question
+  Output: 'Quel est la paramètre pertinent si vous voulez fixer le seuil de signification pour l''intervalle de confiance dans la fonction predict() ?'
+  AnswerChoices: 'p-value; level; significance'
+  CorrectAnswer: 'level'
+  AnswerTests: omnitest(correctVal='level')
+  Hint: 
