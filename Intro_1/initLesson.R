@@ -4,7 +4,7 @@
 # throughout the lesson.
 
 #setwd(dir="C:/Users/Micro Morue/Desktop/Cours/R/Swirl/imqcss/Intro_1")
-setwd(dir="C:/Users/visseho/Documents/Swirl_imqcss/Intro_1")
+setwd(dir="C:/Users/visseho/Documents/swirl_imqcss/Intro_1")
 
 
 UNpop <- read.csv2("UNpop.csv", header = T)
