@@ -5,7 +5,8 @@
 
 library(swirl)
 
-setwd(dir="C:/Users/Micro Morue/Desktop/Cours/R/Swirl/imqcss/Intro_2")
+#setwd(dir="C:/Users/Micro Morue/Desktop/Cours/R/Swirl/imqcss/Intro_2")
+setwd(dir="/Users/visseho/Documents/swirl_imqcss/Intro_2")
 
 UNpop <- read.csv2("UNpop.csv", header = T)
 
