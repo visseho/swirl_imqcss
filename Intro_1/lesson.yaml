@@ -11,144 +11,154 @@
 
 # Question 1
 - Class: cmd_question
-  Output: 'Comment multiplier 4 par 7 ?'
-  CorrectAnswer: '4 * 7'
-  AnswerTests: omnitest(correctExpr='4 * 7')
-  Hint:
+  Output: 'Comment écrire 8 moins 2 ?'
+  CorrectAnswer: '8 - 2'
+  AnswerTests: omnitest(correctExpr='8 - 2')
+  Hint: Tapez simplement 8 - 2.
 
 # Question 2
 - Class: cmd_question
-  Output: 'Comment multiplier 2 par la somme de 9 plus 1 ?'
-  CorrectAnswer: '2 * (9 + 1)'
-  AnswerTests: any_of_exprs('2 * (9 + 1)', '(9 + 1) * 2')
-  Hint: N''oubliez pas les parenthèses.
-
-- Class: text
-  Output: 'R traitera les nombres comme des lettres si vous le lui imposez. Cependant, vous ne serez plus capables de faire des opérations arithmétiques sur ces objets.'
+  Output: 'Comment élever 10 au carré ?'
+  CorrectAnswer: '10 ^ 2'
+  AnswerTests: omnitest(correctExpr='10 ^ 2')
+  Hint: Cette fonction est directement traduite par l'accent circonflexe.
 
 # Question 3
 - Class: cmd_question
-  Output: ' Donnez le nom de "monobjet" au nombre 10.'
-  CorrectAnswer: 'monobjet <- 10'
-  AnswerTests: omnitest(correctExpr='monobject <- 10')
-  Hint:
+  Output: 'Comment trouver la racine carrée de 9 ?'
+  CorrectAnswer: 'sqrt(9)'
+  AnswerTests: omnitest(correctExpr='sqrt(9)')
+  Hint: La fonction racine carrée s'écrit sqrt() dans R.
+
+- Class: text
+  Output: 'Nous allons maintenant nous entraîner à créer des objets et à les nommer.'
 
 # Question 4
 - Class: cmd_question
-  Output: 'Soustrayez 2 à "monobjet" et appelez-le resultat.'
-  CorrectAnswer: 'resultat <- monobjet - 2'
-  AnswerTests: omnitest(correctExpr = 'resultat <- monobjet - 2')
-  Hint: 
+  Output: 'Assignez 8 - 2 au nom "resultat".'
+  CorrectAnswer: 'resultat <- 8 - 2'
+  AnswerTests: omnitest(correctExpr='resultat <- 8 - 2')
+  Hint: nom <- fonction assignée.
 
 # Question 5
 - Class: cmd_question
-  Output: 'Utilisez une fonction pour trouver la classe de l''objet "resultat".'
-  CorrectAnswer: 'class(resultat)'
-  AnswerTests: omnitest(correctExpr= 'class(resultat)')
-  Hint: 
+  Output: 'Tapez le nom de l'objet que nous venons de créer.'
+  CorrectAnswer: 'resultat'
+  AnswerTests: omnitest(correctExpr='resultat')
+  Hint: En tapant juste le nom de l'objet
+
+- Class: text
+  Output: 'Il est aussi possible de donner un nom à une chaîne de lettres.'
 
 # Question 6
 - Class: cmd_question
-  Output: ' Attribuez les caractères ''10'' à "monobjet".'
-  CorrectAnswer: 'monobjet <- "10"'
-  AnswerTests: omnitest(correctExpr='monobjet <- "10")
-  Hint: Souvenez-vous, pour attribuer une suite de caractères typographiques (et non numériques) à une variables, il faut mettre ces caractères entre guillemets.
+  Output: 'Donnez le nom "cours" à la phrase ''science sociale''.'
+  CorrectAnswer: 'cours <- "science sociale"'
+  AnswerTests: omnitest(correctExpr='cours <- "science sociale"')
+  Hint: Pour permettre à R de reconnaîre du texte, il faut l'écrire entre apostrophes (" ").
+
+- Class: text
+  Output: 'Remarquez que les espaces sont autorisés dans les chaînes de lettres.'
+
+- Class: text
+  Output: 'Nous pouvons aussi changer ce à quoi se réfère un objet en lui assignant un nouvel objet.'
 
 # Question 7
+- Class: cmd_question
+  Output: 'Faites en sorte que "cours" se réfère à ''apprendre R''.'
+  CorrectAnswer: 'cours <- "apprendre R"'
+  AnswerTests: omnitest(correctExpr='cours <- "apprendre R"')
+  Hint:
+
+- Class: text
+  Output: 'Nous allons voir que lorsque nous assignons un objet existant à un nouveau nom, cela revient à faire une copie de l'objet existant.'
+
+# Question 8
+- Class: cmd_question
+  Output: 'Assignez la valeur "resultat" à "resultat2".'
+  CorrectAnswer: 'resultat2 <- resultat'
+  AnswerTests: omnitest(correctExpr='resultat2 <- resultat')
+  Hint: Attention, nous ne voulons pas que "resultat2" soit la chaîne de lettres qui compose le mot "resultat", mais bien la valeur qui a été initialement assignée à "resultat".
+
+# Question 9
+- Class: cmd_question
+  Output: 'Appliquez le calcul de 10 moins 2 à l'objet "resultat"'
+  CorrectAnswer: 'resultat <- 10 - 2'
+  AnswerTests: omnitest(correctExpr='resultat <- 10 - 2')
+  Hint: 
+
+# Question 10
 - Class: mult_question
-  Output: 'Quel est le résultat de "monobjet" - 2?'
-  AnswerChoices: '12; Identique à "resultat"; Indéfini'
-  CorrectAnswer: Indéfini
-  AnswerTests: omnitest(correctVal = 'Indéfini')
-  Hint: Rappelez-vous, il est impossible de faire une opération arithmétique sur des objets typographiques.
+  Output: 'Que pensez-vous que R sortira lorsque l'on tapera "c(resultat, resultat2)" ?'
+  AnswerChoices: 'un six et un six; un six et un huit; un huit et un six; un huit et un huit'
+  CorrectAnswer: un six et un huit
+  AnswerTests: omnitest(correctVal = 'un six et un huit')
+  Hint: Regardez les valeurs stockées dans vos données.
+
+- Class: text
+  Output: 'Ensuite, nous allons travailler avec des données réelles: les estimations de la population mondiale (en milliers). Un vecteur de données appelé "world.pop" a été téléchargé avec cette leçon. Les données vont de 1950 jusqu'à 2010.'
+
+# Question 11
+- Class: cmd_question
+  Output: 'Regardez ce à quoi se réfère "world.pop".'
+  CorrectAnswer: 'world.pop'
+  AnswerTests: any_of_exprs('world.pop', 'print(world.pop)')
+  Hint: Ecrivez simplement "world.pop".
+
+# Question 12
+- Class: cmd_question
+  Output: 'Utilisez la commande d'indexation pour jeter un oeil au 4e élément du vecteur "world.pop".'
+  CorrectAnswer: 'world.pop[4]'
+  AnswerTests: omnitest(correctExpr='world.pop[4]')
+  Hint: Pour se référer à un élément d'un vecteur, il faut utiliser les crochets.
+
+# Question 13
+- Class: cmd_question
+  Output: 'Utilisez l'indexation et la concaténation pour avoir accès seulement au 1er et 4e élément du vecteur "world.pop".'
+  CorrectAnswer: 'world.pop[c(1,4)]'
+  AnswerTests: any_of_exprs('world.pop[c(1,4)]', 'c(world.pop[1], world.pop[4])')
+  Hint: Pour sortir plusieurs éléments, il faut passer par la commande de vecteur.
+
+- Class: text
+  Output: 'Nous allons désormais nous entraîner à utiliser les fonctions.'
+
+# Question 14
+- Class: cmd_question
+  Output: 'Comment trouver la dimension, c'est-à-dire le nombre d'éléments, du vecteur "word.pop" ?'
+  CorrectAnswer: 'length(world.pop)'
+  AnswerTests: omnitest(correctExpr='length(world.pop)')
+  Hint: Longueur en anglais.
+
+# Question 15
+- Class: cmd_question
+  Output: 'Créez un vecteur en utilisant la fonction de séquences qui commence en 1950 et finit en 2010 par saut de 10 ans. Assignez ce vecteur à un objet appelé "year".'
+  CorrectAnswer: 'year <- seq(from = 1950, to = 2010, by = 10)'
+  AnswerTests: any_of_exprs('year <- seq(from = 1950, to = 2010, by = 10)', 'year <- seq(1950, 2010, 10)')
+  Hint: La fonction de séquences n'est autre que seq(). Pour accéder à la capsule d'aide de R, tapez '?seq'.
+
+# Question 16
+- Class: cmd_question
+  Output: 'Utilisez le vecteur "year" que vous venez de créer pour donner des noms aux éléments du vecteur "world.pop"'
+  CorrectAnswer: 'names(world.pop) <- year'
+  AnswerTests: any_of_exprs('names(world.pop) <- year', 'setNames(world.pop) <- year')
+  Hint: Pour accéder à la capsule d'aide de R, tapez '?names'.
 
 - Class: text
   Output: 'Nous avons inclu un vecteur "x" dans cette leçon. Ce vecteur contient 10 nombres entiers de 0 à 100.'
 
-# Question 8
-- Class: cmd_question
-  Output: 'Faites ressortir les deux premiers éléments de "x".'
-  CorrectAnswer: 'c(x[1],x[2])'
-  AnswerTests: any_of_exprs('c(x[1],x[2])', 'x[c(1,2)]', 'x[1:2]')
-  Hint: Voir les exercices Intro 1.
-
-# Question 9
-- Class: cmd_question
-  Output: 'Trouvez la valeur maximale de "x".'
-  CorrectAnswer: 'max(x)'
-  AnswerTests: omnitest(correctExpr = 'max(x)')
-  Hint:
-
-- Class: text
-  Output: 'Un vecteur de données appelé "world.pop" a été téléchargé avec cette leçon. Les données vont de 1950 jusqu''à 2010.'
-
-- Class: text
-  Output: '"world.pop" est un vecteur numérique, nous pouvons donc procéder à des opérations arithmétiques.'
-
-# Question 10
-- Class: cmd_question
-  Output: 'Divisez chaque élément de "world.pop" par 1000 et nommez le résultat "pop.million".'
-  CorrectAnswer: 'pop.million <- world.pop / 1000'
-  AnswerTests: omnitest(correctExpr='pop.million <- world.pop / 1000')
-  Hint:
-
-- Class: text
-  Output: 'Un fichier de données .CSV a été téléchargé avec cette leçon, il est nommé "data.csv". Pour des fins pratiques, le chemin pour accéder à "data.csv" a été appelé "data_path".'
-
-# Question 11
-- Class: cmd_question
-  Output: 'Trouvez la valeur de "data_path".'
-  CorrectAnswer: 'data_path'
-  AnswerTests: omnitest(correctExpr='data_path')
-  Hint:
-
-# Question 12
-- Class: cmd_question
-  Output: 'En utilisant "data.path" comme un chemin, lisez le contenu du fichier et appelez-le "df".'
-  CorrectAnswer: 'df <- read.csv(data_path, header = TRUE)'
-  AnswerTests: any_of_exprs('df <- read.csv(data_path, header = TRUE)', 'df <- read.csv(data_path, header = T)', 'df <- read.csv(data_path)')
-  Hint: Pour trouver de l'aide, tapez "?read.csv".
-
-- Class: text
-  Output: 'Les données de "UNpop" ont déjà été téléchargées avec cette leçon.'
-
-# Question 13
-- Class: cmd_question
-  Output: 'Quelles sont les dimensions de "UNpop"?'
-  CorrectAnswer: 'dim(UNpop)'
-  AnswerTests: omnitest(correctExpr='dim(UNpop)')
-  Hint:
-
-# Question 14
-- Class: cmd_question
-  Output: 'Faites ressortir la variable "world.pop" des données de "UNpop".'
-  CorrectAnswer: 'UNpop$world.pop'
-  AnswerTests: any_of_exprs('UNpop$world.pop', 'UNpop[,"world.pop"]')
-  Hint: Pour se concentrer sur une variable d'une base de données, on utilise variable$basededonnées.
-
-# Question 15
-- Class: cmd_question
-  Output: 'Utilisez l''indexation et/ou l''opérateur $ pour jeter un oeil aux 4 dernières observations de la variable "year" des données "UNpop".'
-  CorrectAnswer: 'UNpop$year[4:7]'
-  AnswerTests: any_of_exprs('UNpop[4:7, "year"]', 'UNpop[4:7, 2]', 'UNpop$year[4:7]', 'UNpop[c(4:7), "year"]', 'UNpop[c(4:7), 2]', 'UNpop$year[c(4:7)]', 'UNpop$year[seq(from = 4, to = 7)]')
-  Hint:
-
-- Class: text
-  Output: 'Remarquez que vous devez mettre le nom de la variable entre guillemets, sauf lorsque vous utilisez l''opérateur $.'
-
-# Question 16
-- Class: cmd_question
-  Output: 'R utilise un caractère spécial pour dénoter les commentaires. A l''aide de la fonction "print()", écrivez ''X commence chaque commentaire''. Remplacez X par le caractère approprié.'
-  CorrectAnswer: 'print("# commence chaque commentaire")'
-  AnswerTests: omnitest(correctExpr='print("# commence chaque commentaire")')
-  Hint:
-
 # Question 17
 - Class: cmd_question
-  Output: 'Qu''écririez-vous pour charger le package "utils" dans R ?'
-  CorrectAnswer: 'library(utils)'
-  AnswerTests: any_of_exprs('library(utils)', 'library("utils")')
-  Hint:
+  Output: 'Comment remplaceriez-vous le premier élément de "x" par une valeur manquante ?'
+  CorrectAnswer: 'x[1] <- NA'
+  AnswerTests: any_of_exprs('x[1] <- NA', 'x <- replace(x, 1, NA)')
+  Hint: Les valeurs manquantes s''écrivent 'NA' dans R.
+
+# Question 18
+- Class: mult_question
+  Output: 'Que pensez-vous que R nous répondra si l'on tape "mean(x)" ?'
+  AnswerChoices: 'La moyenne des valeurs restantes; Le cinquième plus grand nombre de "x"; Une valeur manquante'
+  CorrectAnswer: Une valeur manquante
+  AnswerTests: omnitest(correctVal = 'Une valeur manquante')
 
 - Class: text
-  Output: 'Vous avez terminé la partie 1 de l''introduction au cours, félicitations !'
+  Output: 'Vous avez terminé la partie 1 de l'introduction du cours, félicitations !'
