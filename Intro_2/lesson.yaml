@@ -51,7 +51,7 @@
 - Class: cmd_question
   Output: ' Attribuez les caractères ''10'' à "monobjet".'
   CorrectAnswer: 'monobjet <- "10"'
-  AnswerTests: omnitest(correctExpr='monobjet <- \'10\'')
+  AnswerTests: omnitest(correctExpr='monobjet <- "10")
   Hint: Souvenez-vous, pour attribuer une suite de caractères typographiques (et non numériques) à une variables, il faut mettre ces caractères entre guillemets.
 
 # Question 7
