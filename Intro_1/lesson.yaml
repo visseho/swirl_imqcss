@@ -71,7 +71,7 @@
   Hint:
 
 - Class: text
-  Output: 'Nous allons voir que lorsque nous assignons un objet existant à un nouveau nom, cela revient à faire une copie de l'objet existant.'
+  Output: 'Nous allons voir que lorsque nous assignons un objet existant à un nouveau nom, cela revient à faire une copie de l objet existant.'
 
 # Question 8
 - Class: cmd_question
