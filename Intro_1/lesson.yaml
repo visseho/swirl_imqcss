@@ -7,10 +7,7 @@
   Version: 2.4.3
 
 - Class: text
-  Output: 'Ces exercices sont proposés pour vous aider dans votre apprentissage du logiciel R. Lorsque vous voyez ..., appuyez sur Entrer.'
-
-- Class: text
-  Output: 'Commençons par s'entraîner en utilisant R comme calculatrice pour des opérations arithmétiques.'
+  Output: 'Ces exercices sont proposés pour vous aider dans votre apprentissage du logiciel R. Lorsque vous voyez ..., appuyez sur Entrer. Commençons par s'entraîner en utilisant R comme calculatrice pour des opérations arithmétiques.'
 
 # Question 1
 - Class: cmd_question
