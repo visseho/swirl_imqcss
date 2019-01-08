@@ -8,7 +8,9 @@ library(swirl)
 #setwd(dir="C:/Users/Micro Morue/Desktop/Cours/R/Swirl/imqcss/Intro_2")
 setwd(dir="/Users/visseho/Documents/swirl_imqcss/Intro_2")
 
+#library(tidyverse)
 UNpop <- read.csv2("UNpop.csv", header = T)
+#UNpop <- read_csv("UNpop.csv")
 
 world.pop <- UNpop$world.pop
 
