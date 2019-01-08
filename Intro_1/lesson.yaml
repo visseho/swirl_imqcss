@@ -10,7 +10,7 @@
   Output: 'Ces exercices sont proposés pour vous aider dans votre apprentissage du logiciel R. Lorsque vous voyez ..., appuyez sur Entrer.'
 
 - Class: text
-  Output: 'Si vous avez besoin d'aide à un quelconque moment, tapez help.start(). Cette commande ouvrira un index de fonctions de R. De nombreuses ressources pour l'utilisation de R sont disponibles en ligne, et sont facilement accessible par internet.'
+  Output: 'Si vous avez besoin d'aide à un quelconque moment, tapez "help.start()". Cette commande ouvrira un index de fonctions de R. De nombreuses ressources pour l'utilisation de R sont disponibles en ligne, et sont facilement accessible par internet.'
 
 - Class: text
   Output: 'Commençons par s'entraîner en utilisant R comme calculatrice pour des opérations arithmétiques.'
