@@ -96,7 +96,7 @@
   Hint: Regardez les valeurs stockées dans vos données.
 
 - Class: text
-  Output: 'Ensuite, nous allons travailler avec des données réelles: les estimations de la population mondiale (en milliers). Un vecteur de données appelé "world.pop" a été téléchargé avec cette leçon. Les données vont de 1950 jusqu'à 2010.'
+  Output: 'Ensuite, nous allons travailler avec des données réelles: les estimations de la population mondiale (en milliers). Un vecteur de données appelé "world.pop" a été téléchargé avec cette leçon. Les données vont de 1950 jusqu à 2010.'
 
 # Question 11
 - Class: cmd_question
