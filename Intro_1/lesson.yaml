@@ -1,13 +1,13 @@
 - Class: meta
   Course: imqcss
-  Lesson: Intro 1
+  Lesson: Intro 2
   Author: Vissého Adjiwanou
   Type: Standard
   Organization: Département de Sociologie, Université du Québec à Montréal (UQAM)
   Version: 2.4.3
 
 - Class: text
-  Output: 'Ces exercices sont proposés pour vous aider dans votre apprentissage du logiciel R. Lorsque vous voyez ..., appuyez sur Entrer. Commençons par s'entraîner en utilisant R comme calculatrice pour des opérations arithmétiques.'
+  Output: 'Ces exercices sont complémentaires au Chapitre 1 du livre ''Quantitative Social Science: Introduction''. Lorsque vous voyez ..., appuyez sur Entrer.'
 
 # Question 1
 - Class: cmd_question
