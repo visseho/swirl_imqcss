@@ -1,13 +1,13 @@
 - Class: meta
   Course: imqcss
-  Lesson: Intro 2
+  Lesson: Intro 1
   Author: Vissého Adjiwanou
   Type: Standard
   Organization: Département de Sociologie, Université du Québec à Montréal (UQAM)
   Version: 2.4.3
 
 - Class: text
-  Output: 'Ces exercices sont complémentaires au Chapitre 1 du livre ''Quantitative Social Science: Introduction''. Lorsque vous voyez ..., appuyez sur Entrer.'
+  Output: 'Ces exercices sont complémentaires au Chapitre 1. Lorsque vous voyez ..., appuyez sur Entrer.'
 
 # Question 1
 - Class: cmd_question
