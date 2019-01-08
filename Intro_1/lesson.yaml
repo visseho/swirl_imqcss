@@ -41,11 +41,11 @@
   Hint: nom <- fonction assignée.
 
 # Question 5
-- Class: cmd_question
-  Output: 'Tapez le nom de l'objet que nous venons de créer.'
-  CorrectAnswer: 'resultat'
-  AnswerTests: omnitest(correctExpr='resultat')
-  Hint: En tapant juste le nom de l'objet
+#- Class: cmd_question
+#  Output: 'Tapez le nom de l'objet que nous venons de créer.'
+#  CorrectAnswer: 'resultat'
+#  AnswerTests: omnitest(correctExpr='resultat')
+#  Hint: En tapant juste le nom de l'objet
 
 - Class: text
   Output: 'Il est aussi possible de donner un nom à une chaîne de lettres.'
