@@ -16,7 +16,7 @@
   Output: 'Nous utiliserons des guillemets pour désigner les objets R. Cependant, dans le langage R, il n''existe que quelques cas où les guillemets sont utilisés'
 
 - Class: text
-  Output: 'Commençons par s''entraîner en utilisant R comme calculatrice pour des opérations arithmétiques.'
+  Output: 'Commençons par s'entraîner en utilisant R comme calculatrice pour des opérations arithmétiques.'
 
 # Question 1
 - Class: cmd_question

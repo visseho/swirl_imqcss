@@ -6,7 +6,7 @@
 library(swirl)
 
 #setwd(dir="C:/Users/Micro Morue/Desktop/Cours/R/Swirl/imqcss/Intro_2")
-setwd(dir="/Users/visseho/Documents/swirl_imqcss/Intro_2")
+setwd(dir="/Users/visseho/Documents/swirl_imqcss/Intro_3")
 
 UNpop <- read.csv2("UNpop.csv", header = T)
 
@@ -19,7 +19,7 @@ x <- sample(1:100, 10)
 #                        "qss-swirl", "INTRO2")
 
 lesson_dir <- file.path(path.package(substring(find("swirl")[1], 9)), "Courses",
-                        "swirl_imqcss", "Intro_2")
+                        "swirl_imqcss", "Intro_3")
 
 # Make path to data and let user call read.csv(data_path)
 data_path <- file.path(lesson_dir, "data.csv")

@@ -14,6 +14,16 @@ world.pop <- UNpop$world.pop
 x <- sample(1:100, 10)
 
 
+# Make path to lesson directory
+#lesson_dir <- file.path(path.package(substring(find("swirl")[1], 9)), "Courses",
+#                        "qss-swirl", "INTRO2")
+
+lesson_dir <- file.path(path.package(substring(find("swirl")[1], 9)), "Courses",
+                        "swirl_imqcss", "Intro_1")
+
+# Make path to data and let user call read.csv(data_path)
+data_path <- file.path(lesson_dir, "data.csv")
+
 
 #swirl_options(swirl_logging = TRUE)
 
