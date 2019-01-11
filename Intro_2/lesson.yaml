@@ -29,8 +29,8 @@
 # Question 3
 - Class: cmd_question
   Output: ' Donnez le nom de "monobjet" au nombre 10.'
-  CorrectAnswer: 'monobjet <- "10"'
-  AnswerTests: omnitest(correctExpr='monobjet <- "10"')
+  CorrectAnswer: 'monobjet <- 10'
+  AnswerTests: omnitest(correctExpr='monobjet <- 10')
   Hint:
 
 # Question 4
