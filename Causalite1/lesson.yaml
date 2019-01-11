@@ -76,7 +76,7 @@
 
 # Question 4
 - Class: mult_question
-  Output: 'Ensuite, d'après les statistiques descriptives de "resume", quel est le taux de rappel dans les données ? Plus précisément, quelle proportion des candidats a été rappelée ?'
+  Output: 'Ensuite, d''après les statistiques descriptives de "resume", quel est le taux de rappel dans les données ? Plus précisément, quelle proportion des candidats a été rappelée ?'
   AnswerChoices: '2%; 16%; 8%; 9%'
   CorrectAnswer: 8%
   AnswerTests: omnitest(correctVal="8%")
