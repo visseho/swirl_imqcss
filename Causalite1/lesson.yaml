@@ -1,7 +1,93 @@
 - Class: meta
   Course: imqcss
   Lesson: Causalite1
-  Author: your name goes here
+  Author: Vissého Adjiwanou
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: Département de Sociologie, Université du Québec à Montréal (UQAM)
   Version: 2.4.3
+
+- Class: text
+  Output: 'Ces exercices sont complémentaires au Chapitre 2 du livre ''Quantitative Social Science: Introduction''. Lorsque vous voyez ..., appuyez sur Entrer.'
+
+## Questions sur les concepts
+# Question 1
+- Class: mult_question
+  Output: 'Imaginez une variable binaire, c''est à dire qui ne prend que les valeurs 0 ou 1 (par exemple, le genre féminin). Laquelle des propositions suivante est équivalente à sa moyenne ?'
+  AnswerChoices: 'La médiane de l''échantillon; La proportion de valeurs 1; Aucun des deux'
+  CorrectAnswer: La proportion de valeurs 1
+  AnswerTests: omnitest(correctVal="La proportion de valeurs 1")
+  Hint: 'Pensez à la formule de la moyenne.'
+
+# Question 2
+- Class: mult_question
+  Output: 'Quelle sorte de valeur est "FALSE"?'
+  AnswerChoices: '"caractère"; "logique"; "binaire"; "numérique"'
+  CorrectAnswer: 'logique'
+  AnswerTests: omnitest(correctVal='"logique"')
+  Hint:
+
+# Question 3
+- Class: cmd_question
+  Output: 'Traduisez la phrase suivante en utilisant les valeurs logiques de R (c.à.d "TRUE" et "FALSE") ainsi que les opérateurs (c.à.d !, =, &, et |): TRUE ou FALSE n''est pas FALSE.'
+  CorrectAnswer: (TRUE | FALSE) == !FALSE
+  AnswerTests: any_of_exprs("(TRUE | FALSE) == !FALSE", "TRUE | FALSE == !FALSE", "TRUE | FALSE != FALSE", "(TRUE | FALSE) != FALSE", "T|F != F", "(T|F) != F", "T|F == !F", "(T|F) == !F")
+  Hint: 'Attention aux majuscules et aux espaces.'
+
+# Question 4
+- Class: mult_question
+  Output: 'Pour calculer la moyenne d''une variable, nous avons utilisé la fonction "length()" au dénominateur. Le résultat de la fonction "length()" d''un vecteur correspond _____ ?'
+  AnswerChoices: 'Au nombre d éléments; à la hauteur; Au maximum'
+  CorrectAnswer: Au nombre d élements
+  AnswerTests: omnitest(correctVal='Au nombre d éléments')
+  Hint:
+
+# Question 5
+- Class: mult_question
+  Output: 'Quelle différence entre les variables par facteur (factor variables) et les variables catégorielles (categorical variables)  ?'
+  AnswerChoices: 'Ils sont identiques; Les variables par facteur contiennent des valeurs numériques; Les variables catégorielles ont tendance à avoir plus de niveaux de catégories'
+  CorrectAnswer: Ils sont identiques
+  AnswerTests: omnitest(correctVal='Ils sont identiques')
+  Hint:
+
+## Questions de programmation
+- Class: text
+  Output: 'Une grande variété de données externes peuvent être téléchargées dans R, comme des fichiers de type CSV (Comma Separated Values) et des fichiers R Workspace (RData files).' 
+
+# Question 1
+- Class: cmd_question
+  Output: 'En utilisant la fonction read.csv(), nous avons déjà téléchargé un fichier de données externes "resume.csv" en tant qu''objet appelé "resume". Utilisez la fonction head() et regardez les 6 premières lignes de l''objet "resume".'
+  CorrectAnswer: head(resume)
+  AnswerTests: omnitest(correctExpr="head(resume)")
+  Hint: 
+
+# Question 2
+- Class: cmd_question
+  Output: 'Trouvez les dimensions de "resume".'
+  CorrectAnswer: dim(resume)
+  AnswerTests: omnitest(correctExpr="dim(resume)")
+  Hint: 
+
+# Question 3
+- Class: cmd_question
+  Output: 'Cette question est en 2 parties. D''abord, créez un tableau des statistiques descriptives de "resume" qui contient, entre autre, la moyenne de chaque variable de l''échantillon.'
+  CorrectAnswer: summary(resume)
+  AnswerTests: omnitest(correctExpr="summary(resume)")
+  Hint: 'Les statistiques descriptives se nomment "summary" en anglais.'
+
+# Question 4
+- Class: mult_question
+  Output: 'Ensuite, d'après les statistiques descriptives de "resume", quel est le taux de rappel dans les données ? Plus précisément, quelle proportion des candidats a été rappelée ?'
+  AnswerChoices: '2%; 16%; 8%; 9%'
+  CorrectAnswer: 8%
+  AnswerTests: omnitest(correctVal="8%")
+  Hint:
+
+# Question 5
+- Class: cmd_question
+  Output: 'L''objet "resume" contient deux variables binaires, "sex" et "call". Créez un tableau qui compare le nombre de candidats de sexe féminin aux nombre de candidats de sexe masculin qui ont et n''ont pas été rappelés. Faites attention à bien nommer les lignes ''sex'' et les colonnes ''call''.'
+  CorrectAnswer: table(sex = resume$sex, call = resume$call)
+  AnswerTests: omnitest(correctExpr="table(sex = resume$sex, call = resume$call)")
+  Hint: 'Tapez "?table"" pour plus d''informations sur les tableaux'
+
+- Class: text
+  Output: 'Vous avez terminé la partie 1 du cours sur la causalité, félicitations !'
