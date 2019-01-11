@@ -40,8 +40,8 @@ result <- 8 - 2
 #lesson_dir <- file.path(path.package(substring(find("swirl")[1], 9)), "Courses",
 #                        "qss-swirl", "INTRO2")
 
-lesson_dir <- file.path(path.package(substring(find("swirl")[1], 9)), "Courses",
-                        "swirl_imqcss", "Intro_2")
+#lesson_dir <- file.path(path.package(substring(find("swirl")[1], 9)), "Courses",
+#                        "swirl_imqcss", "Intro_2")
 
 # Make path to data and let user call read.csv(data_path)
-data_path <- file.path(lesson_dir, "data.csv")
+#data_path <- file.path(lesson_dir, "data.csv")
