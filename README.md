@@ -1,14 +1,15 @@
 # swirl_imqcss
-Introduction aux méthodes quantitatives et computationnelles en sciences sociales, UQAM
+Introduction aux mÃ©thodes quantitatives et computationnelles en sciences sociales, UQAM
 
-Pour utiliser les leçons
+**Pour utiliser les leÃ§ons**
 
-Installer le package swirl
-install.packages("swirl")
+1. _Installer le package swirl_
+- install.packages("swirl")
 
-Installer les leçons swirl_imqcss:
-library(swirl) # load the swirl package
-install_course_github("visseho", "swirl_imqcss")
+2. _Installer les leÃ§ons swirl_imqcss_
+- library(swirl)
+- install_course_github("visseho", "swirl_imqcss")
 
-Commencer une nouvelle leçon (après avoir chargé la package swirl):
-swirl()
+3. _Commencer une nouvelle leÃ§on_
+- swirl()
+- Les exercices apparaÃ®tront dans la console de RStudio.
