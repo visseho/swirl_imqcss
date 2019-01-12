@@ -34,7 +34,17 @@ UNpop <- as.data.frame(cbind(world.pop, year))
 
 x <- sample(1:100, 10)
 
-result <- 8 - 2
+resultat <- 8 - 2
+
+#Creating data_path
+x <- c(5,"aa","TRUE")
+y <- c(2,"bb","FALSE")
+z <- c(8,"cc","TRUE")
+data_path <- rbind(x,y,z)
+
+colnames(data_path) <- c("n","s","p")
+rownames(data_path) <- c(1:3)
+
 
 # Make path to lesson directory
 #lesson_dir <- file.path(path.package(substring(find("swirl")[1], 9)), "Courses",
