@@ -23,6 +23,6 @@ Introduction aux méthodes quantitatives et computationnelles en sciences social
 
 Les exercices apparaîtront dans la console de RStudio.
 
-Des mises à jours seront faites au courant de la session, nous vous invitons donc à désinstaller la leçon à chaque fois que vous finissez vos exercices, et à les réinstaller à chaque fois que vous les commencez. Pour installer, voir point 2. Pour désinstaller, voici la démarche:
+Des mises à jours seront faites au courant de la session, nous vous invitons donc à désinstaller la leçon à chaque fois que vous finissez vos exercices, et à la réinstaller à chaque fois que vous les commencez. Pour installer, voir point 2. Pour désinstaller, voici la démarche:
 
 ``` uninstall_course("swirl_imqcss") ```
